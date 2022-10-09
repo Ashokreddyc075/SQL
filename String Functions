@@ -1,0 +1,61 @@
+-->left()
+-->RIGHT()
+-->SUBSTRING()
+-->REPLACE()
+-->LEN()
+-->LTRIM()
+-->RTRIM()
+-->LOWER()
+-->UPPER()
+-->SPACE()
+-->REPLICATE()
+-->REVERSE()
+-->CHARINDEX()
+-->QUOTENAME()
+-->STRING_SPLIT()
+
+LEFT:
+=====
+  SELECT LEFT('ABC',2) -->AB
+RIGHT:
+=====
+  SELECT RIGHT('ABC',2) --> BC
+SUBSTRING():
+===========
+  Is used to select the specified number of characters from the specified character position.
+    ex:
+    --
+        ABC
+        A = 1
+        B = 2
+        C = 3
+        
+SELECT SUBSTRING('ABCD',2,2) --> BC
+
+
+LEN():
+=====
+-->COUNT THE CHARACTERS IN STRING
+	"IF BEFORE TEXT SPACE IS THERE IT WILL COUNT AND AFTER TEXT IT WILL NOT COUNT"
+      SELECT LEN('  ABCD') --> 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
