@@ -1,0 +1,75 @@
+1.Aggregate functions
+2.String functions
+3.Numeric Functions
+4.Date Functions 
+
+--AGGREGATE FUNCTIONS
+=====================
+/*
+1.SUM()
+2.COUNT() ------------------->  count only non null values 
+3.COUNT(*) ------------------>  count entire coloumn including null values 
+4.COUNT(DISTINCT(COL NAME)) --> count the distinct number of rows in a column
+5.AVG()
+6.MIN()
+7.MAX()
+*/
+/*
+SYNTAX:
+
+	SELECT SUM/COUNT/AVG/MIN/MAX 
+	(
+		COL1 NAME
+		,COL2 NAME
+		,COL3 NAME
+	FROM <TABLE NAME>
+	WHERE <COLNAME> <OPERATOR> <VALUE>
+		<AND/OR> <COLNAME> <OPERATOR> <VALUE>
+	GROUP BY
+		,COL1 NAME
+		,COL2 NAME
+		,COL3 NAME
+	HAVING SUM/COUNT/AVG/MIN/MAX (<COLNAME>) <OPERATOR> <VALUE>
+	ORDER BY <CO,NAME> <ASC/DESC>
+	*/
+
+SELECT * FROM PURCHASEORDER
+
+
+Q)The Summation of all the purchases orders for the period 1st april-2019 to 30th june-2019?
+
+    select sum(amount) as [Total amount] from PURCHASEORDER between Transactiondate = '2019-04-01' and '2019-06-03'
+
+Q)The Summation of all the purchases orders for the period 1st april-2019 to 30th june-2019 For each customer?
+  
+    select CUSTOMER_ID,SUM(AMOUNT) FROM PURCHASEORDER WHERE TRANSACTION_DATE BETWEEN '2019-04-01' AND '2019-06-03' GROUP BY CUSTOMER_ID
+  
+Q) The Summation of all the purchases orders Made in the year 2019,for each customer and each product where the total amount is greate than 100000 and 
+    sort the results set by total amount in the descending?
+    
+    select CUSTOMER_ID,PRODUCT_ID,SUM(AMOUNT) as [Total Amount]
+        FROM PURCHASEORDER 
+        WHERE TRANSACTION_DATE BETWEEN '2019-04-01' AND '2019-06-03'
+        GROUP BY CUSTOMER_ID,PRODUCT_ID
+        Having sum(AMOUNT) > 100000
+        order by [Total Amount] desc
+        
+Q) Number of purchase orders and number of unique customer for the year 2019?
+
+     SELECT COUNT(*) AS [NUMBEROFORDERS],COUNT(DISTINCT CUSTOMER_ID) AS [NUMBEROFCUSTOMER] FROM PURCHASEORDER 
+      WHERE TRANSACTION_DATE BETWEEN '2019-04-01' AND '2019-06-03'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
