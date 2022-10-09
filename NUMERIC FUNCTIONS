@@ -1,0 +1,21 @@
+-->ABS()
+-->ISNUMERIC() ---> ISNUMERIC() FUNCTION ONE IN THE PLACE OF NUMBER
+                                 FUNCTIONS RETURENS ZERO IN THE PLACE CHARATER 
+                                 
+                                 SELECT ISNUMERIC(-99999) --> 1
+                                 SELECT ISNUMERIC(99999)  ---> 1
+                                 SELECT ISNUMERIC('2019-0-15') --> 0
+                                 SELECT ISNUMERIC('ABC') --------> 0
+                                 
+-->ROUND()
+-->RAND()
+-->POWER()  SELECT POWER(2,10)
+-->FLOOR() AND CEILING() ----->
+        FLOOR --> FLOOR FUNCTIONS RETURNS THE LARGEST VALUE WHICH IS LESS THAN OR EQALTO SUPPLIED NUMBER 
+                  EX:
+                  ==
+                  SELECT FLOOR(10.99) --> 11
+                  
+        CEILING -->FLOOR FUNCTIONS RETURNS THE SMALLEST VALUE WHICH IS LESS THAN OR EQALTO SUPPLIED NUMBER
+        
+                  SELECT FLOOR(10.99) --> 10
