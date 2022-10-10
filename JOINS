@@ -1,0 +1,68 @@
+Join clause is used to combine rows from one or more tables based on related columns of both tables 
+
+Syntax:
+=======
+select <table 1 alias>.<col name>,
+       <table 2 alias>.<col name>
+FROM   <table 1 name> <table1 alias>
+       < INNER | LEFT | RIGHT | FULL > JOIN <Table 2 name> <table 2 alias>
+ON
+       <Table 1 alias>.<col name> <operator> <table 2 alias>.<col name>
+<AND | OR>
+       <Table 1 alias>.<col name> <operator> <table 2 alias>.<col name>
+WHERE
+       <Table 1 alias>.<col name> <operator> <table 2 alias>.<col name>
+<AND | OR>
+        <Table 1 alias>.<col name> <operator> <table 2 alias>.<col name>
+        
+INNER JOIN:
+==========
+    It return matching records from both tables 
+Relationships:
+============
+--> One to one relationship
+--> one to many relationship
+--> many to many relationship
+ 
+ One to one relationship:
+ =======================
+    Table_A having 10 rows of 10 unique ID's
+    Table_B Having 8 rows of  08 unique ID's
+    INNER JOIN RETURNS ONLY 8 ROWS
+    
+one to many relationship
+========================
+    Table_A having 10 rows of 10 unique ID's
+    Table_B Having 10 rows of 08 unique ID's
+    INNER JOIN RETURNS ONLY 10 ROWS
+
+many to many relationship
+=========================
+    Table_A having 10 rows of 5 unique ID's
+    Table_B Having 10 rows of 5 unique ID's
+    INNER JOIN RETURNS ONLY 5 ROWS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
