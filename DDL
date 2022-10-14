@@ -1,0 +1,71 @@
+
+1.Data definition Language
+	Create
+	Alter
+	Drop
+	Truncate
+
+Create:
+======
+ Create table <table> (<col1> <data type(size)>,<col2> <data type(size)>,.........,<coln> <data type(size)>
+ EX:
+	create table emp(eid int,ename varchar(20),sal decimal(6,2))
+
+ Alter:
+ ====
+1.Increase or decrease the size of the data type
+	Syntax -- alter table <tablename> alter column <colname> datatype(size)
+
+	EX : alter table emp alter column ename varchar(30)
+
+2.Add new col to the existing table
+	Syntax -- alter table <tablename>  ADD <col name data type(size)
+
+	EX : alter table emo add deptno int
+ 
+ 3.We can remove the table from existing table 
+	syntax -- alter table <table name> drop column <column name>
+
+	EX :  alter table emp drop column  deptno 
+
+4.We can also change column name
+	syntax -- SP_RENAME 'TABLENAME.OLDCOLUMN','NEW COLUMN NAME','COLUMN'
+
+	EX :  SP_RENAME 'EMP.SAL','SALARY','COLUMN'
+
+DROP:
+====
+--> This command is used to remove the table permently from the database
+
+	syntax:
+	=======
+	Drop table <table name>
+
+Truncate:
+========
+--> This  command is used to delete all  records from the existing table permanently
+	syntax:
+	======
+	Truncate table <table name>
+===================================================================================================================================================================
+ 
+
+-->Change Table name:
+	===============
+	SP_RENAME
+	=========
+		SYNTAX:
+		======
+		SP_Rename 'OLD TABLE NAME','NEW TABLE NAME'
+
+		EX:
+		==
+		SP_RENAME 'EMP','EMPLOYEE'
+
+-->To see the STRUCTURE:
+	==================
+	SP_HELP
+	=======
+	TO SEE THE STRUCTURE OF THE TABLE
+	SP_HELP <table name>
+	
